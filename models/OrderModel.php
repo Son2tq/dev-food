@@ -32,7 +32,3 @@ function addOrderDetail($input) {
 function updateQuantityProduct($products, $id) {
 	updateQuantity(tableProduct, $products, $id);
 }
-
-
-
-?>

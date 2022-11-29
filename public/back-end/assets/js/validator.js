@@ -21,11 +21,11 @@ function Validator(formSelector) {
                 ? undefined
                 : "Vui lòng nhập chính xác email của bạn";
         },
-        phone(value) {
-            var regex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        number(value) {
+            var regex = /^[-+]?[0-9]+$/;
             return regex.test(value)
                 ? undefined
-                : "Vui lòng nhập chính xác SĐT của bạn";
+                : "Vui lòng nhập nhập số";
         },
         min(min) {
             return function (value) {
@@ -35,7 +35,6 @@ function Validator(formSelector) {
         checked(elementChecked) {
             return elementChecked ? undefined : "Vui lòng chọn trường này";
         },
-
     };
 
     if (formElement) {

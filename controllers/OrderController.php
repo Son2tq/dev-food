@@ -47,7 +47,7 @@ function add()
 			foreach ($products as $product) {
 				if ($product['sale']) {
 					$price = $product['sale'];
-				} else {		
+				} else {
 					$price = $product['price'];
 				}
 				addOrderDetail([
@@ -55,6 +55,7 @@ function add()
 					'product_id' => $product['id'],
 					'price' => $price,
 					'quantity' => $_SESSION['cart'][$product['id']],
+					'total_money' => $price
 				]);
 			}
 			// Update số lượng trong kho

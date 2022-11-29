@@ -1,18 +1,16 @@
-<?php 
-define('tableNameUser','users');
+<?php
+define('tableNameUser', 'users');
 
-function getAllUser(){
-     $data = all(tableNameUser);
-     // var_dump($data);die;
+function getAllUser()
+{
+     $data = findColumn(tableNameUser, 'role_id', 2);
      return $data;
 }
-function deleteUser(){
+function deleteUser()
+{
      $id = $_GET['id'];
      // var_dump($id);die;
-     remove(tableNameUser,$id);
+     remove(tableNameUser, $id);
 }
-
-
-
 
 ?>

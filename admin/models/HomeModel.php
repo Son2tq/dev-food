@@ -41,3 +41,15 @@ function getTop5()
 	$data = all(tableProduct, 5);
 	return $data;
 }
+
+function getAdmin($input)
+{
+	$data = check('users', $input);
+	return $data;
+}
+
+function getOrderDone()
+{
+	$data = findColumn(tableOrders, 'status', 1);
+	return $data;
+}
